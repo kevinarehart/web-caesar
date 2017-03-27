@@ -19,11 +19,11 @@ import caesar
 import cgi
 
 def build_page(textarea_content):
-   rot_label = "<label>Rotate by:</label>"
-   rotation_input = "<input type='number' name='rotation'/>"
+   rot_label = "<label><h2>Rotate by:<h2></label>"
+   rotation_input = "<input type='number' name='rotation' style='height: 50px; width: 50px;'/<br>"
 
-   message_label = "<label>Type a message:</label>"
-   textarea = "<textarea name='message'>" + textarea_content + "</textarea>"
+   message_label = "<label><h3>Type a message:<h3></label>"
+   textarea = "<textarea name='message' style='height: 100px; width: 400px;'>" + textarea_content + "</textarea><br>"
 
    submit = "<input type='submit'/>"
    form = ("<form method='post'>" +
@@ -31,7 +31,7 @@ def build_page(textarea_content):
           message_label + textarea + "<br>" +
           submit + "</form>")
 
-   header = "<h2>Web Caesar</h2>"
+   header = "<h1>Web Caesar</h1>"
 
    return header + form
 
